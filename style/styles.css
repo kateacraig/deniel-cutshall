@@ -1,0 +1,416 @@
+/* CSS Variables */
+:root {
+  /* Brand Colors */
+  --white: #ffffff;
+  --black: #000000;
+  --primary-color: rgba(111, 175, 123);
+  --secondary-color: rgba(62, 89, 116);
+  --third-color: rgba(179, 85, 58);
+  --fourth-color: rgba(217, 183, 108);
+
+  /* Typography */
+  --font-heading: "Knewave", system-ui;
+  --font-body: "Noto Sans", sans-serif;
+  --letter-spacing: 3px;
+
+  /* Transitions */
+  --transition: all 150ms ease-in-out;
+
+  /* Shadows */
+  --image-shadow: 10px 5px 5px rgba(0, 0, 0, 0.3);
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  /* Border Radius */
+  --radius-sm: 5px;
+  --radius-md: 10px;
+
+  /* Border */
+  --border: 2px solid var(--white);
+
+  /* Breakpoints */
+  --desktop: 1200px;
+  --tablet: 760px;
+  --mobile: 460px;
+}
+
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+body {
+  color: var(--white);
+  line-height: 1.6;
+  background-color: var(--black);
+}
+
+section {
+  padding: 100px 0;
+}
+
+section.hero {
+  padding: 150px 50;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition);
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-family: var(--font-body);
+}
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.mb-4 {
+  margin-bottom: 4rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mt-3 {
+  margin-top: 3rem;
+}
+
+.mt-4 {
+  margin-top: 4rem;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.green {
+  color: rgb(8, 107, 8);
+}
+
+/* Buttons */
+.btn-donate {
+  background-color: var(--primary-color);
+  color: var(--white);
+  height: 50px;
+  width: 130px;
+  border-radius: 30px;
+  border: 1.5px solid var(--white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.btn-donate:hover {
+  background-color: var(--white);
+  border: 1.5px solid var(--primary-color);
+  color: var(--white);
+}
+
+.btn-donate-footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  height: 50px;
+  width: 140px;
+  padding: 0 20px;
+  border-radius: 30px;
+  border: 1.5px solid var(--white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.btn-donate-footer:hover {
+  background-color: var(--white);
+  border: 1.5px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.nav-menu > li > a.btn-donate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+/* Container */
+.container {
+  max-width: var(--desktop);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.content {
+  max-width: 1000px;
+}
+
+/* Header Styles */
+header {
+  padding: 1rem 0;
+
+  top: 0;
+  z-index: 1000;
+}
+
+.header-content {
+  max-width: var(--desktop);
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+/* Navigation */
+nav {
+  order: 2;
+}
+
+.nav-header {
+  padding: 0;
+  padding-top: 2rem;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-menu > li {
+  position: relative;
+}
+
+.nav-menu > li > a {
+  color: var(--white);
+  text-shadow: -0.5px -0.5px 0 var(--primary-color),
+    0.5px -0.5px 0 var(--primary-color), -0.5px 0.5px 0 var(--primary-color),
+    0.5px 0.5px 0 var(--primary-color);
+  font-weight: 500;
+  padding: 0.5rem 0.8rem;
+  font-family: var(--font-body);
+  display: block;
+  font-size: 1.5rem;
+}
+
+.nav-menu > li > a:hover {
+  color: var(--primary-color);
+  font-weight: 500;
+  text-shadow: -0.6px -0.6px 0 var(--white), 0.6px -0.6px 0 var(--white),
+    -0.6px 0.6px 0 var(--white), 0.6px 0.6px 0 var(--white);
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background-color: var(--white);
+  margin: 3px 0;
+  transition: var(--transition);
+  border-radius: 3px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ==========================================
+   Footer
+   ========================================== */
+/* Footer Grid */
+footer {
+  background: linear-gradient(
+    180deg,
+    rgb(36, 36, 36, 1) 0%,
+    rgb(26, 26, 26, 1) 30%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  padding: 3rem 0 2rem 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 3fr 3fr 1fr;
+  grid-gap: 2rem;
+}
+
+.footer-mobile-links-grid {
+  display: none;
+}
+
+footer h3 {
+  font-weight: 300;
+  color: var(--primary-color);
+  letter-spacing: 3px;
+}
+
+/* Footer Logo */
+.footer-logo img {
+  width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: -50px;
+}
+
+.footer-donate-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+.footer-donate-other {
+  margin-top: 1rem;
+}
+
+.footer-follow-ashley-mobile {
+  display: none;
+}
+
+.footer-follow-ashley h4 {
+  font-size: 1.3rem;
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+.footer-follow-ashley a:hover {
+  color: var(--primary-color);
+}
+
+.footer-donate-other a {
+  background-color: var(--primary-color);
+  color: var(--white);
+  height: 50px;
+  width: 150px;
+  padding: 0 20px;
+  border-radius: 30px;
+  border: 1.5px solid var(--white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.footer-donate-other a:hover {
+  background-color: var(--white);
+  border: 1.5px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.footer-copyright {
+  margin-top: 3rem;
+  font-weight: 300;
+}
+
+.important-links li {
+  list-style: none;
+  padding: 0;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-family: var(--font-body);
+}
+
+.important-links li:hover {
+  color: var(--primary-color);
+}
+
+.footer-social-icons {
+  display: flex;
+  justify-content: left;
+  gap: 20px;
+}
+
+.footer-social-icon {
+  font-size: 30px;
+}
+
+.footer-social-icon:hover {
+  color: var(--primary-color);
+}
